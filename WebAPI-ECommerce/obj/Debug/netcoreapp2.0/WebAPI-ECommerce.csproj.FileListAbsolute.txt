@@ -1,0 +1,4 @@
+C:\Users\WORK_USER\source\repos\WebAPI-ECommerce\WebAPI-ECommerce\obj\Debug\netcoreapp2.0\WebAPI-ECommerce.csprojAssemblyReference.cache
+C:\Users\WORK_USER\source\repos\WebAPI-ECommerce\WebAPI-ECommerce\obj\Debug\netcoreapp2.0\WebAPI-ECommerce.csproj.CoreCompileInputs.cache
+C:\Users\WORK_USER\source\repos\WebAPI-ECommerce\WebAPI-ECommerce\obj\Debug\netcoreapp2.0\WebAPI-ECommerce.AssemblyInfoInputs.cache
+C:\Users\WORK_USER\source\repos\WebAPI-ECommerce\WebAPI-ECommerce\obj\Debug\netcoreapp2.0\WebAPI-ECommerce.AssemblyInfo.cs
