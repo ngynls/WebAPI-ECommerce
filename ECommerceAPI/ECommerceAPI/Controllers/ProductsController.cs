@@ -22,15 +22,16 @@ namespace ECommerceAPI.Controllers
 
         // GET: api/Products
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Product>>> GetTodoItems()
+        public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
-            return await _context.Products.ToListAsync();
+            return await _context.Products.Include(p => p.Category).ToListAsync();
         }
 
         // GET: api/Products/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Product>> GetProduct(long id)
         {
+            _context.ChangeTracker.LazyLoadingEnabled = false;
             var p = await _context.Products.FindAsync(id);
 
             if (p == null)
@@ -38,12 +39,14 @@ namespace ECommerceAPI.Controllers
                 return NotFound();
             }
 
+            _context.Entry(p).Reference(prod => prod.Category).Load();
+
             return p;
         }
 
-        // POST: api/Todo
+        // POST: api/Products
         [HttpPost]
-        public async Task<ActionResult<Product>> PostTodoItem(Product p)
+        public async Task<ActionResult<Product>> PostProduct(Product p)
         {
             _context.Products.Add(p);
             await _context.SaveChangesAsync();
@@ -53,7 +56,7 @@ namespace ECommerceAPI.Controllers
 
         // PUT: api/Products/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutTodoItem(long id, Product p)
+        public async Task<IActionResult> PutProduct(long id, Product p)
         {
             if (id != p.Id)
             {
@@ -66,9 +69,9 @@ namespace ECommerceAPI.Controllers
             return NoContent();
         }
 
-        // DELETE: api/Product/5
+        // DELETE: api/Products/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteTodoItem(long id)
+        public async Task<IActionResult> DeleteProduct(long id)
         {
             var p = await _context.Products.FindAsync(id);
 
