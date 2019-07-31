@@ -28,7 +28,8 @@ namespace ECommerceAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ShopContext>(opt =>
-              opt.UseInMemoryDatabase("ShopDB"));
+              opt.UseNpgsql(Configuration.GetSection("DatabaseConfig")["PostgresSQL"])
+            );
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
