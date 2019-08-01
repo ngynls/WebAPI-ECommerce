@@ -24,7 +24,10 @@ namespace ECommerceAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
-            return await _context.Products.Include(p => p.Category).ToListAsync();
+            return await _context.Products
+                .Include(p => p.Category)
+                .Include(p => p.Brand)
+                .ToListAsync();
         }
 
         // GET: api/Products/5
@@ -39,7 +42,13 @@ namespace ECommerceAPI.Controllers
                 return NotFound();
             }
 
-            _context.Entry(p).Reference(prod => prod.Category).Load();
+            _context.Entry(p)
+                .Reference(prod => prod.Category)
+                .Load();
+
+            _context.Entry(p)
+                .Reference(prod => prod.Brand)
+                .Load();
 
             return p;
         }

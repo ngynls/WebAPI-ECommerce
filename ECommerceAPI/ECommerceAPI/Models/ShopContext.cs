@@ -11,6 +11,7 @@ namespace ECommerceAPI.Models
         public ShopContext(DbContextOptions<ShopContext> options) : base(options) { }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Brand> Brands { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -20,9 +21,12 @@ namespace ECommerceAPI.Models
                 new Category { Id = 3, Name = "Tablet" },
                 new Category { Id = 4, Name = "Video game console" }
             );
+            modelBuilder.Entity<Brand>().HasData(
+                new Brand { Id = 1, Name = "Sony" }
+            );
             modelBuilder.Entity<Product>().HasData(
               new Product { Id = 1, Name = "PS4", Description= "Fourth generation of the Playstation console", ImageUrl= "https://images-na.ssl-images-amazon.com/images/I/31qwualUaLL._SR600,315_SCLZZZZZZZ_.jpg",
-              Cost=399.99, Quantity=200, OutOfStock=false, CategoryId=4}
+              Cost=399.99, Quantity=200, OutOfStock=false, CategoryId=4, BrandId=1}
             );
         }
     }

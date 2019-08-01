@@ -15,7 +15,9 @@ namespace ECommerceAPI.Models
        public int Quantity { get; set; }
        public bool OutOfStock { get; set; }
        public long CategoryId { get; set; }
+       public long BrandId { get; set; }
 
        public virtual Category Category { get; set; }
+       public virtual Brand Brand { get; set; }
     }
 }
