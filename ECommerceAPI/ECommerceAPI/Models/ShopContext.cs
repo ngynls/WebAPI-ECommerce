@@ -12,6 +12,11 @@ namespace ECommerceAPI.Models
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Brand> Brands { get; set; }
+        public DbSet<City> Cities { get; set; }
+        public DbSet<Province> Provinces { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<Address> Addresses { get; set; }
+        public DbSet<CustomerAddress> CustomerAddresses { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -27,6 +32,17 @@ namespace ECommerceAPI.Models
             modelBuilder.Entity<Product>().HasData(
               new Product { Id = 1, Name = "PS4", Description= "Fourth generation of the Playstation console", ImageUrl= "https://images-na.ssl-images-amazon.com/images/I/31qwualUaLL._SR600,315_SCLZZZZZZZ_.jpg",
               Cost=399.99, Quantity=200, OutOfStock=false, CategoryId=4, BrandId=1}
+            );
+            modelBuilder.Entity<City>().HasData(
+                new City { Id = 1, Name = "Montreal" },
+                new City { Id = 2, Name = "Toronto"}
+            );
+            modelBuilder.Entity<Province>().HasData(
+                new Province { Id = 1, Name = "Quebec" },
+                new Province { Id = 2, Name = "Ontario" }
+            );
+            modelBuilder.Entity<Country>().HasData(
+                new Country { Id = 1, Name = "Canada" }
             );
         }
     }
