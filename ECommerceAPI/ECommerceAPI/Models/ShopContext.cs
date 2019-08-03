@@ -16,6 +16,7 @@ namespace ECommerceAPI.Models
         public DbSet<Province> Provinces { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<Address> Addresses { get; set; }
+        public DbSet<Customer> Customers { get; set; }
         public DbSet<CustomerAddress> CustomerAddresses { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
