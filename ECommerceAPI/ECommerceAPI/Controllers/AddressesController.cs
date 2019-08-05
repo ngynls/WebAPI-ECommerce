@@ -25,6 +25,8 @@ namespace ECommerceAPI.Controllers
         public async Task<ActionResult<IEnumerable<Address>>> GetAddresses()
         {
             return await _context.Addresses
+                .Include(a => a.City)
+                .Include(a => a.Province)
                 .ToListAsync();
         }
 
@@ -39,6 +41,14 @@ namespace ECommerceAPI.Controllers
             {
                 return NotFound();
             }
+
+            _context.Entry(a)
+                .Reference(add => add.City)
+                .Load();
+
+            _context.Entry(a)
+                .Reference(add => add.Province)
+                .Load();
 
             return a;
         }
