@@ -53,6 +53,17 @@ namespace ECommerceAPI.Controllers
             return i;
         }
 
+        // GET: api/CartItems
+        [HttpGet("byCustomer/{id}")]
+        public async Task<ActionResult<IEnumerable<CartItem>>> GetCartItemsByCustomer(long id)
+        {
+            return await _context.CartItems
+                .Where(c => c.CartId == id)
+                .Include(c => c.Cart)
+                .Include(c => c.Product)
+                .ToListAsync();
+        }
+
         // POST: api/CartItems
         [HttpPost]
         public async Task<ActionResult<CartItem>> PostCartItem(CartItem i)
