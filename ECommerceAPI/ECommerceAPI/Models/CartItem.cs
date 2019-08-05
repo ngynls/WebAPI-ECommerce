@@ -11,7 +11,6 @@ namespace ECommerceAPI.Models
         public long CartId { get; set; }
         public long ProductId { get; set; }
         public int Quantity { get; set; }
-        public double PricePerItem { get; set; }
 
         public virtual Cart Cart { get; set; }
         public virtual Product Product { get; set; }
