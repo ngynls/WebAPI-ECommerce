@@ -52,6 +52,12 @@ namespace ECommerceAPI.Controllers
             _context.Customers.Add(c);
             await _context.SaveChangesAsync();
 
+            Cart cart = new Cart();
+            cart.Id = c.Id;
+            cart.CustomerId = c.Id;
+            _context.Carts.Add(cart);
+            await _context.SaveChangesAsync();
+
             return CreatedAtAction(nameof(GetCustomer), new { id = c.Id }, c);
         }
 
