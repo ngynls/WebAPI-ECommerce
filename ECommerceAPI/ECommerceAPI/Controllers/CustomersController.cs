@@ -47,7 +47,7 @@ namespace ECommerceAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Customer>> PostCustomer(Customer c)
         {
-            c.RegistrationDate = DateTime.Today;
+            c.RegistrationDate = DateTime.Now.ToShortDateString();
             c.Password = BCrypt.Net.BCrypt.HashPassword(c.Password);
             _context.Customers.Add(c);
             await _context.SaveChangesAsync();
