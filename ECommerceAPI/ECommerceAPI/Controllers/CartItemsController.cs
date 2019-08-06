@@ -30,7 +30,7 @@ namespace ECommerceAPI.Controllers
                 .ToListAsync();
         }
 
-        // GET: api/CartItems
+        // GET: api/CartItems/5
         [HttpGet("{id}")]
         public async Task<ActionResult<CartItem>> GetCartItem(long id)
         {
