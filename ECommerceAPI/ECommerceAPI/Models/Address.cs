@@ -12,8 +12,10 @@ namespace ECommerceAPI.Models
         public string PostalCode { get; set; }
         public long CityId { get; set; }
         public long ProvinceId { get; set; }
+        public long CountryId { get; set; }
 
         public virtual City City { get; set; }
         public virtual Province Province { get; set; }
+        public virtual Country Country { get; set; }
     }
 }

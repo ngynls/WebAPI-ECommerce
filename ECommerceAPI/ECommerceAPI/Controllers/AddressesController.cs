@@ -27,6 +27,7 @@ namespace ECommerceAPI.Controllers
             return await _context.Addresses
                 .Include(a => a.City)
                 .Include(a => a.Province)
+                .Include(a => a.Country)
                 .ToListAsync();
         }
 
@@ -48,6 +49,10 @@ namespace ECommerceAPI.Controllers
 
             _context.Entry(a)
                 .Reference(add => add.Province)
+                .Load();
+
+            _context.Entry(a)
+                .Reference(add => add.Country)
                 .Load();
 
             return a;
