@@ -77,6 +77,17 @@ namespace ECommerceAPI.Controllers
         /// <summary>
         /// Submit a new cart item
         /// </summary>
+        /// <remarks>
+        /// Sample request
+        /// 
+        ///     POST api/CartItems
+        ///     {
+        ///         "cartId": 1,
+        ///         "productId": 1,
+        ///         "quantity": 2
+        ///     }
+        ///     
+        /// </remarks>
         [HttpPost]
         public async Task<ActionResult<CartItem>> PostCartItem(CartItem i)
         {

@@ -53,6 +53,21 @@ namespace ECommerceAPI.Controllers
         /// <summary>
         /// Submit a new customer
         /// </summary>
+        /// <remarks>
+        /// Sample request
+        ///     
+        ///     POST api/Customers
+        ///     {
+        ///         "firstName": "Luke",
+        ///         "lastName": "Skywalker",
+        ///         "gender": "Male",
+        ///         "username": "lukeskyw",
+        ///         "password": "luke1234",
+        ///         "email": "lukeskyw@gmail.com",
+        ///         "phoneNumber": "400-400-4000"
+        ///     }
+        ///     
+        /// </remarks>
         [HttpPost]
         public async Task<ActionResult<Customer>> PostCustomer(Customer c)
         {

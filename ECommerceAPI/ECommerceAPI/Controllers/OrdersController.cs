@@ -71,6 +71,23 @@ namespace ECommerceAPI.Controllers
         /// <summary>
         /// Submit a new order
         /// </summary>
+        /// <remarks>
+        /// Sample request
+        /// 
+        ///     POST api/Orders
+        ///     {
+        ///         "dateIssued": "8/7/2019"
+        ///         "shippedDate": "TBD",
+        ///         "status": "Processing",
+        ///         "subTotal": 50.00,
+        ///         "tPSTax": 2.50,
+        ///         "tVQTax": 4.88,
+        ///         "total" : 57.38,
+        ///         "paymentType": "CC",
+        ///         "customerId": 1
+        ///     }
+        ///     
+        /// </remarks>
         [HttpPost]
         public async Task<ActionResult<Order>> PostOrder(Order o)
         {

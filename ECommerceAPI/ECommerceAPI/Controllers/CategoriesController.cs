@@ -51,6 +51,15 @@ namespace ECommerceAPI.Controllers
         /// <summary>
         /// Submit a new category
         /// </summary>
+        /// <remarks>
+        /// Sample request
+        ///     
+        ///     POST api/Categories
+        ///     {
+        ///         "name": "CategoryName"
+        ///     }
+        ///     
+        /// </remarks>
         [HttpPost]
         public async Task<ActionResult<Category>> PostCategory(Category c)
         {

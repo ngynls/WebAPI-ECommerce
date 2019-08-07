@@ -37,8 +37,8 @@ namespace ECommerceAPI
                 c.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info
                 {
                     Version = "v1",
-                    Title = "ECommerce API",
-                    Description = "A simple example ASP.NET Core Web API",
+                    Title = "Techstore API",
+                    Description = "A basic server for an ecommerce using ASP.NET Core Web API",
                 });
 
                 // Set the comments path for the Swagger JSON and UI.

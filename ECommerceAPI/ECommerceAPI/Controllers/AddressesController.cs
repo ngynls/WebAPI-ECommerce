@@ -70,6 +70,19 @@ namespace ECommerceAPI.Controllers
         /// <summary>
         /// Submit a new address
         /// </summary>
+        /// <remarks>
+        /// Sample request
+        ///     
+        ///     POST api/Addresses
+        ///     {
+        ///         "addressLine" : "1000 Fake St.",
+        ///         "postalCode" : "MTP-100",
+        ///         "cityId": 1,
+        ///         "provinceId": 1,
+        ///         "countryId": 1
+        ///     }
+        ///     
+        /// </remarks>
         /// <returns>A newly created address</returns>
         [HttpPost]
         public async Task<ActionResult<Address>> PostAddress(Address a)

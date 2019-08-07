@@ -63,6 +63,17 @@ namespace ECommerceAPI.Controllers
         /// <summary>
         /// Submit a new order detail
         /// </summary>
+        /// <remarks>
+        /// Sample request
+        /// 
+        ///     POST api/OrderDetails
+        ///     {
+        ///         "orderId": 1,
+        ///         "productId": 1,
+        ///         "quantity" 1
+        ///     }
+        ///     
+        /// </remarks>
         [HttpPost]
         public async Task<ActionResult<OrderDetail>> PostOrderDetail(OrderDetail o)
         {

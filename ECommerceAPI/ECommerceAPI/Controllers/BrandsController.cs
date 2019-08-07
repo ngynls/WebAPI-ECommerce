@@ -51,6 +51,15 @@ namespace ECommerceAPI.Controllers
         /// <summary>
         /// Submit a new brand
         /// </summary>
+        /// <remarks>
+        /// Sample request
+        /// 
+        ///     POST api/Brands
+        ///     {
+        ///         "name": "BrandName"
+        ///     }
+        ///     
+        /// </remarks>
         [HttpPost]
         public async Task<ActionResult<Brand>> PostBrand(Brand b)
         {

@@ -20,6 +20,19 @@
             <summary>
             Submit a new address
             </summary>
+            <remarks>
+            Sample request
+                
+                POST api/Addresses
+                {
+                    "addressLine" : "1000 Fake St.",
+                    "postalCode" : "MTP-100",
+                    "cityId": 1,
+                    "provinceId": 1,
+                    "countryId": 1
+                }
+                
+            </remarks>
             <returns>A newly created address</returns>
         </member>
         <member name="M:ECommerceAPI.Controllers.AddressesController.PutAddress(System.Int64,ECommerceAPI.Models.Address)">
@@ -47,6 +60,15 @@
             <summary>
             Submit a new brand
             </summary>
+            <remarks>
+            Sample request
+            
+                POST api/Brands
+                {
+                    "name": "BrandName"
+                }
+                
+            </remarks>
         </member>
         <member name="M:ECommerceAPI.Controllers.BrandsController.PutBrand(System.Int64,ECommerceAPI.Models.Brand)">
             <summary>
@@ -77,6 +99,17 @@
             <summary>
             Submit a new cart item
             </summary>
+            <remarks>
+            Sample request
+            
+                POST api/CartItems
+                {
+                    "cartId": 1,
+                    "productId": 1,
+                    "quantity": 2
+                }
+                
+            </remarks>
         </member>
         <member name="M:ECommerceAPI.Controllers.CartItemsController.PutCartItem(System.Int64,ECommerceAPI.Models.CartItem)">
             <summary>
@@ -102,6 +135,15 @@
             <summary>
             Submit a new category
             </summary>
+            <remarks>
+            Sample request
+                
+                POST api/Categories
+                {
+                    "name": "CategoryName"
+                }
+                
+            </remarks>
         </member>
         <member name="M:ECommerceAPI.Controllers.CategoriesController.PutCategory(System.Int64,ECommerceAPI.Models.Category)">
             <summary>
@@ -127,6 +169,21 @@
             <summary>
             Submit a new customer
             </summary>
+            <remarks>
+            Sample request
+                
+                POST api/Customers
+                {
+                    "firstName": "Luke",
+                    "lastName": "Skywalker",
+                    "gender": "Male",
+                    "username": "lukeskyw",
+                    "password": "luke1234",
+                    "email": "lukeskyw@gmail.com",
+                    "phoneNumber": "400-400-4000"
+                }
+                
+            </remarks>
         </member>
         <member name="M:ECommerceAPI.Controllers.CustomersController.PutCustomer(System.Int64,ECommerceAPI.Models.Customer)">
             <summary>
@@ -152,6 +209,17 @@
             <summary>
             Submit a new order detail
             </summary>
+            <remarks>
+            Sample request
+            
+                POST api/OrderDetails
+                {
+                    "orderId": 1,
+                    "productId": 1,
+                    "quantity" 1
+                }
+                
+            </remarks>
         </member>
         <member name="M:ECommerceAPI.Controllers.OrderDetailsController.PutOrderDetails(System.Int64,ECommerceAPI.Models.OrderDetail)">
             <summary>
@@ -182,6 +250,23 @@
             <summary>
             Submit a new order
             </summary>
+            <remarks>
+            Sample request
+            
+                POST api/Orders
+                {
+                    "dateIssued": "8/7/2019"
+                    "shippedDate": "TBD",
+                    "status": "Processing",
+                    "subTotal": 50.00,
+                    "tPSTax": 2.50,
+                    "tVQTax": 4.88,
+                    "total" : 57.38,
+                    "paymentType": "CC",
+                    "customerId": 1
+                }
+                
+            </remarks>
         </member>
         <member name="M:ECommerceAPI.Controllers.OrdersController.PutOrder(System.Int64,ECommerceAPI.Models.Order)">
             <summary>
@@ -207,6 +292,21 @@
             <summary>
             Submit a new product
             </summary>
+            <remarks>
+            Sample request
+                
+                POST api/Products
+                {
+                    "name": "ProductName",
+                    "description": "A description here",
+                    "imageUrl": "https://yourwebsite.com/images/image1.jpg",
+                    "cost": 99.99,
+                    "quantity": 200,
+                    "outOfStock": false,
+                    "categoryId" 1
+                }
+                
+            </remarks>
         </member>
         <member name="M:ECommerceAPI.Controllers.ProductsController.PutProduct(System.Int64,ECommerceAPI.Models.Product)">
             <summary>

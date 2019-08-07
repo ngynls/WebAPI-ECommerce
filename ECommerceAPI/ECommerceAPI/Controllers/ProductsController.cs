@@ -63,6 +63,21 @@ namespace ECommerceAPI.Controllers
         /// <summary>
         /// Submit a new product
         /// </summary>
+        /// <remarks>
+        /// Sample request
+        ///     
+        ///     POST api/Products
+        ///     {
+        ///         "name": "ProductName",
+        ///         "description": "A description here",
+        ///         "imageUrl": "https://yourwebsite.com/images/image1.jpg",
+        ///         "cost": 99.99,
+        ///         "quantity": 200,
+        ///         "outOfStock": false,
+        ///         "categoryId" 1
+        ///     }
+        ///     
+        /// </remarks>
         [HttpPost]
         public async Task<ActionResult<Product>> PostProduct(Product p)
         {
