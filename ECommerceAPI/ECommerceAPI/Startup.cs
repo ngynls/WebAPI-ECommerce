@@ -38,7 +38,7 @@ namespace ECommerceAPI
                 {
                     Version = "v1",
                     Title = "Techstore API",
-                    Description = "A basic server for an ecommerce using ASP.NET Core Web API",
+                    Description = "A basic server for an ecommerce site using ASP.NET Core Web API",
                 });
 
                 // Set the comments path for the Swagger JSON and UI.
