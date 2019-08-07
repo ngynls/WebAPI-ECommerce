@@ -21,6 +21,9 @@ namespace ECommerceAPI.Controllers
         }
 
         // GET: api/Categories
+        /// <summary>
+        /// Retrieve all categories from the database
+        /// </summary>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Category>>> GetCategories()
         {
@@ -28,6 +31,9 @@ namespace ECommerceAPI.Controllers
         }
 
         // GET: api/Categories/5
+        /// <summary>
+        /// Retrieve a particular category
+        /// </summary>
         [HttpGet("{id}")]
         public async Task<ActionResult<Category>> GetCategory(long id)
         {
@@ -42,6 +48,9 @@ namespace ECommerceAPI.Controllers
         }
 
         // POST: api/Categories
+        /// <summary>
+        /// Submit a new category
+        /// </summary>
         [HttpPost]
         public async Task<ActionResult<Category>> PostCategory(Category c)
         {
@@ -52,6 +61,9 @@ namespace ECommerceAPI.Controllers
         }
 
         // PUT: api/Categories/5
+        /// <summary>
+        /// Update a particular category
+        /// </summary>
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCategory(long id, Category c)
         {
@@ -67,6 +79,9 @@ namespace ECommerceAPI.Controllers
         }
 
         // DELETE: api/Categories/5
+        /// <summary>
+        /// Delete a particular category
+        /// </summary>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCategory(long id)
         {

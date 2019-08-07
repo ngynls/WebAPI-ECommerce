@@ -12,3 +12,4 @@ C:\Users\WORK_USER\source\repos\WebAPI-ECommerce\ECommerceAPI\ECommerceAPI\obj\D
 C:\Users\WORK_USER\source\repos\WebAPI-ECommerce\ECommerceAPI\ECommerceAPI\bin\Debug\netcoreapp2.2\ECommerceAPI.pdb
 C:\Users\WORK_USER\source\repos\WebAPI-ECommerce\ECommerceAPI\ECommerceAPI\obj\Debug\netcoreapp2.2\ECommerceAPI.dll
 C:\Users\WORK_USER\source\repos\WebAPI-ECommerce\ECommerceAPI\ECommerceAPI\obj\Debug\netcoreapp2.2\ECommerceAPI.pdb
+C:\Users\WORK_USER\source\repos\WebAPI-ECommerce\ECommerceAPI\ECommerceAPI\bin\Debug\netcoreapp2.2\ECommerceAPI.xml

@@ -40,6 +40,11 @@ namespace ECommerceAPI
                     Title = "ECommerce API",
                     Description = "A simple example ASP.NET Core Web API",
                 });
+
+                // Set the comments path for the Swagger JSON and UI.
+                var xmlFile = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = System.IO.Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
             });
         }
 

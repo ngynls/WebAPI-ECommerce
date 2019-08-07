@@ -21,6 +21,9 @@ namespace ECommerceAPI.Controllers
         }
 
         // GET: api/CartItems
+        /// <summary>
+        /// Retrieve all cart items from the database
+        /// </summary>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CartItem>>> GetCartItems()
         {
@@ -31,6 +34,9 @@ namespace ECommerceAPI.Controllers
         }
 
         // GET: api/CartItems/5
+        /// <summary>
+        /// Retrieve a particular cart item
+        /// </summary>
         [HttpGet("{id}")]
         public async Task<ActionResult<CartItem>> GetCartItem(long id)
         {
@@ -54,6 +60,9 @@ namespace ECommerceAPI.Controllers
         }
 
         // GET: api/CartItems
+        /// <summary>
+        /// Retrieve all cart items for a particular customer
+        /// </summary>
         [HttpGet("byCustomer/{id}")]
         public async Task<ActionResult<IEnumerable<CartItem>>> GetCartItemsByCustomer(long id)
         {
@@ -65,6 +74,9 @@ namespace ECommerceAPI.Controllers
         }
 
         // POST: api/CartItems
+        /// <summary>
+        /// Submit a new cart item
+        /// </summary>
         [HttpPost]
         public async Task<ActionResult<CartItem>> PostCartItem(CartItem i)
         {
@@ -75,6 +87,9 @@ namespace ECommerceAPI.Controllers
         }
 
         // PUT: api/CartItems/5
+        /// <summary>
+        /// Update a particular cart item
+        /// </summary>
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCartItem(long id, CartItem i)
         {
@@ -90,6 +105,9 @@ namespace ECommerceAPI.Controllers
         }
 
         // DELETE: api/CartItems/5
+        /// <summary>
+        /// Delete a particular cart item
+        /// </summary>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCartItem(long id)
         {

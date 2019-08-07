@@ -21,6 +21,9 @@ namespace ECommerceAPI.Controllers
         }
 
         // GET: api/Customers
+        /// <summary>
+        /// Retrieve all customers from the database
+        /// </summary>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Customer>>> GetProducts()
         {
@@ -29,6 +32,9 @@ namespace ECommerceAPI.Controllers
         }
 
         // GET: api/Customers/5
+        /// <summary>
+        /// Retrieve a particular customer
+        /// </summary>
         [HttpGet("{id}")]
         public async Task<ActionResult<Customer>> GetCustomer(long id)
         {
@@ -44,6 +50,9 @@ namespace ECommerceAPI.Controllers
         }
 
         // POST: api/Customers
+        /// <summary>
+        /// Submit a new customer
+        /// </summary>
         [HttpPost]
         public async Task<ActionResult<Customer>> PostCustomer(Customer c)
         {
@@ -62,6 +71,9 @@ namespace ECommerceAPI.Controllers
         }
 
         // PUT: api/Customers/5
+        /// <summary>
+        /// Update a particular customer
+        /// </summary>
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCustomer(long id, Customer c)
         {
@@ -78,6 +90,9 @@ namespace ECommerceAPI.Controllers
 
 
         // DELETE: api/Customers/5
+        /// <summary>
+        /// Delete a particular customer
+        /// </summary>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCustomer(long id)
         {

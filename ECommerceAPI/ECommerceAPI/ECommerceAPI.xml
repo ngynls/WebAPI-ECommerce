@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ECommerceAPI</name>
+    </assembly>
+    <members>
+        <member name="M:ECommerceAPI.Controllers.AddressesController.GetAddresses">
+            <summary>
+            Retrieve all addresses from the database
+            </summary>
+            <returns>All addresses</returns>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.AddressesController.GetAddress(System.Int64)">
+            <summary>
+            Retrieve a particular address
+            </summary>
+            <returns>The address corresponding to the id passed as a parameter</returns>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.AddressesController.PostAddress(ECommerceAPI.Models.Address)">
+            <summary>
+            Submit a new address
+            </summary>
+            <returns>A newly created address</returns>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.AddressesController.PutAddress(System.Int64,ECommerceAPI.Models.Address)">
+            <summary>
+            Update a particular address
+            </summary>
+            <returns>An updated address</returns>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.AddressesController.DeleteAddress(System.Int64)">
+            <summary>
+            Delete an address
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.BrandsController.GetBrands">
+            <summary>
+            Retrieve all brands from the database
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.BrandsController.GetBrand(System.Int64)">
+            <summary>
+            Retrieve a particular brand
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.BrandsController.PostBrand(ECommerceAPI.Models.Brand)">
+            <summary>
+            Submit a new brand
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.BrandsController.PutBrand(System.Int64,ECommerceAPI.Models.Brand)">
+            <summary>
+            Update a particular brand
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.BrandsController.DeleteBrand(System.Int64)">
+            <summary>
+            Delete a particular brand
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.CartItemsController.GetCartItems">
+            <summary>
+            Retrieve all cart items from the database
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.CartItemsController.GetCartItem(System.Int64)">
+            <summary>
+            Retrieve a particular cart item
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.CartItemsController.GetCartItemsByCustomer(System.Int64)">
+            <summary>
+            Retrieve all cart items for a particular customer
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.CartItemsController.PostCartItem(ECommerceAPI.Models.CartItem)">
+            <summary>
+            Submit a new cart item
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.CartItemsController.PutCartItem(System.Int64,ECommerceAPI.Models.CartItem)">
+            <summary>
+            Update a particular cart item
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.CartItemsController.DeleteCartItem(System.Int64)">
+            <summary>
+            Delete a particular cart item
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.CategoriesController.GetCategories">
+            <summary>
+            Retrieve all categories from the database
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.CategoriesController.GetCategory(System.Int64)">
+            <summary>
+            Retrieve a particular category
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.CategoriesController.PostCategory(ECommerceAPI.Models.Category)">
+            <summary>
+            Submit a new category
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.CategoriesController.PutCategory(System.Int64,ECommerceAPI.Models.Category)">
+            <summary>
+            Update a particular category
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.CategoriesController.DeleteCategory(System.Int64)">
+            <summary>
+            Delete a particular category
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.CustomersController.GetProducts">
+            <summary>
+            Retrieve all customers from the database
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.CustomersController.GetCustomer(System.Int64)">
+            <summary>
+            Retrieve a particular customer
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.CustomersController.PostCustomer(ECommerceAPI.Models.Customer)">
+            <summary>
+            Submit a new customer
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.CustomersController.PutCustomer(System.Int64,ECommerceAPI.Models.Customer)">
+            <summary>
+            Update a particular customer
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.CustomersController.DeleteCustomer(System.Int64)">
+            <summary>
+            Delete a particular customer
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.OrderDetailsController.GetOrderDetails">
+            <summary>
+            Retrieve all order details from the database
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.OrderDetailsController.GetOrderDetail(System.Int64)">
+            <summary>
+            Retrieve a particular order detail
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.OrderDetailsController.PostOrderDetail(ECommerceAPI.Models.OrderDetail)">
+            <summary>
+            Submit a new order detail
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.OrderDetailsController.PutOrderDetails(System.Int64,ECommerceAPI.Models.OrderDetail)">
+            <summary>
+            Update a particular order detail
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.OrderDetailsController.DeleteOrderDetail(System.Int64)">
+            <summary>
+            Delete a particular order detail
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.OrdersController.GetOrders">
+            <summary>
+            Retrieve all orders from the database
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.OrdersController.GetOrder(System.Int64)">
+            <summary>
+            Retrieve a particular order
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.OrdersController.GetOrdersByCustomer(System.Int64)">
+            <summary>
+            Retrieve all orders for a particular customer
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.OrdersController.PostOrder(ECommerceAPI.Models.Order)">
+            <summary>
+            Submit a new order
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.OrdersController.PutOrder(System.Int64,ECommerceAPI.Models.Order)">
+            <summary>
+            Update a particular order
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.OrdersController.DeleteOrder(System.Int64)">
+            <summary>
+            Delete a particular order
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.ProductsController.GetProducts">
+            <summary>
+            Retrieve all products from the database
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.ProductsController.GetProduct(System.Int64)">
+            <summary>
+            Retrieve a particular product
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.ProductsController.PostProduct(ECommerceAPI.Models.Product)">
+            <summary>
+            Submit a new product
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.ProductsController.PutProduct(System.Int64,ECommerceAPI.Models.Product)">
+            <summary>
+            Update a particular product
+            </summary>
+        </member>
+        <member name="M:ECommerceAPI.Controllers.ProductsController.DeleteProduct(System.Int64)">
+            <summary>
+            Delete a particular product
+            </summary>
+        </member>
+    </members>
+</doc>

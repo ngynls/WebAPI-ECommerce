@@ -21,6 +21,10 @@ namespace ECommerceAPI.Controllers
         }
 
         // GET: api/Addresses
+        /// <summary>
+        /// Retrieve all addresses from the database
+        /// </summary>
+        /// <returns>All addresses</returns>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Address>>> GetAddresses()
         {
@@ -32,6 +36,10 @@ namespace ECommerceAPI.Controllers
         }
 
         // GET: api/Addresses/5
+        /// <summary>
+        /// Retrieve a particular address
+        /// </summary>
+        /// <returns>The address corresponding to the id passed as a parameter</returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<Address>> GetAddress(long id)
         {
@@ -59,6 +67,10 @@ namespace ECommerceAPI.Controllers
         }
 
         // POST: api/Addresses
+        /// <summary>
+        /// Submit a new address
+        /// </summary>
+        /// <returns>A newly created address</returns>
         [HttpPost]
         public async Task<ActionResult<Address>> PostAddress(Address a)
         {
@@ -69,6 +81,10 @@ namespace ECommerceAPI.Controllers
         }
 
         // PUT: api/Addresses/5
+        /// <summary>
+        /// Update a particular address
+        /// </summary>
+        /// <returns>An updated address</returns>
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAddress(long id, Address a)
         {
@@ -84,6 +100,9 @@ namespace ECommerceAPI.Controllers
         }
 
         // DELETE: api/Addresses/5
+        /// <summary>
+        /// Delete an address
+        /// </summary>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAddress(long id)
         {

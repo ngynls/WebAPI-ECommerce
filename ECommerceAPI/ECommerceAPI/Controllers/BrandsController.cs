@@ -21,6 +21,9 @@ namespace ECommerceAPI.Controllers
         }
 
         // GET: api/Brands
+        /// <summary>
+        /// Retrieve all brands from the database
+        /// </summary>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Brand>>> GetBrands()
         {
@@ -28,6 +31,9 @@ namespace ECommerceAPI.Controllers
         }
 
         // GET: api/Brands/5
+        /// <summary>
+        /// Retrieve a particular brand
+        /// </summary>
         [HttpGet("{id}")]
         public async Task<ActionResult<Brand>> GetBrand(long id)
         {
@@ -42,6 +48,9 @@ namespace ECommerceAPI.Controllers
         }
 
         // POST: api/Brands
+        /// <summary>
+        /// Submit a new brand
+        /// </summary>
         [HttpPost]
         public async Task<ActionResult<Brand>> PostBrand(Brand b)
         {
@@ -52,6 +61,9 @@ namespace ECommerceAPI.Controllers
         }
 
         // PUT: api/Brands/5
+        /// <summary>
+        /// Update a particular brand
+        /// </summary>
         [HttpPut("{id}")]
         public async Task<IActionResult> PutBrand(long id, Brand b)
         {
@@ -67,6 +79,9 @@ namespace ECommerceAPI.Controllers
         }
 
         // DELETE: api/Brands/5
+        /// <summary>
+        /// Delete a particular brand
+        /// </summary>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteBrand(long id)
         {
